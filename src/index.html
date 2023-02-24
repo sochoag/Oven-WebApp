@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <link rel="stylesheet" href="./assets/styles.css">
+  <title>Oven WebApp</title>
+</head>
+
+<body>
+  <header>
+    <h1>Control de Temperatura</h1>
+  </header>
+  <div>
+    <div style="width: 400px;"><canvas id="chart"></canvas></div>
+    <label for="temperature"><span id="temp-range-value" class="val">1000</span><span> °C</span></label>
+    <input id="temp-range" type="range" min="0" max="1500" value="1000" step="50" name="temperature" disabled />
+    <button id="on-btn" disabled>Encender</button>
+    <button id="off-btn" disabled>Apagar</button>
+    <button id="set-btn" disabled>Setear</button>
+    <button id="fake-btn">Fake Data</button>
+  </div>
+  <aside>
+    <h2>Iniciar Sesión</h2>
+    <div>
+      <label for="username">Nombre de Usuario:</label>
+      <input type="text" id="username" name="username" value="oven-webapp" />
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" value="10101011" />
+      <button id="mqtt-login">Iniciar sesión</button>
+    </div>
+  </aside>
+  <footer>
+    <p>Autor: --- NOMBRE ---</p>
+  </footer>
+  <script src="assets/index.js"></script>
+  <script src="assets/helper.js"></script>
+</body>
+
+</html>
