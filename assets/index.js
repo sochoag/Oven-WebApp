@@ -171,7 +171,7 @@ function disconnectMQTT() {
 function setTemperature() {
   const tempVal = tempRange.value;
   const toSend = {
-    temp: tempVal,
+    temp: parseInt(tempVal),
   };
   console.log(toSend);
   client.publish("oven/control/actdata", JSON.stringify(toSend));
