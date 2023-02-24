@@ -77,6 +77,8 @@ const config = {
         min: Date.now(),
       },
       y: {
+        min: 0,
+        max: 1600,
         // Configuración del eje Y
       },
     },
